@@ -30,6 +30,9 @@ pipeline{
           label 'slave2'
         }
       }
+      steps{
+        sh 'echo "we are excited"'
+      }
     stage('Unit-testing'){
         steps{
           sh 'cat /etc/passwd'
@@ -46,6 +49,9 @@ pipeline{
         label {
           label 'slave3'
         }
+      }        
+      steps{
+        sh 'echo "we are building software"'
       }
     stage('system-status1'){
         steps{
