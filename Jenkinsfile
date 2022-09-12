@@ -30,7 +30,7 @@ pipeline{
             label 'slave2'
             }
         }
-        steps{
+            steps{
             sh 'echo "we are excited"'
         }
     stage('Unit-testing'){
@@ -50,7 +50,7 @@ pipeline{
           label 'slave3'
         }
       }        
-      steps{
+        steps{
         sh 'echo "we are building software"'
       }
     stage('system-status1'){
