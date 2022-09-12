@@ -24,15 +24,15 @@ pipeline{
         }        
       }
     }
-    stage('codebuild'){
-      agent {
-        label {
-          label 'slave2'
+        stage('codebuild'){
+        agent {
+            label {
+            label 'slave2'
+            }
         }
-      }
-      steps{
-        sh 'echo "we are excited"'
-      }
+        steps{
+            sh 'echo "we are excited"'
+        }
     stage('Unit-testing'){
         steps{
           sh 'cat /etc/passwd'
